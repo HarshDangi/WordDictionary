@@ -22,4 +22,12 @@ def translate(word):
 
 word = input("Enter the word: ")
 
-print(translate(word))
+output = translate(word)
+
+if type(output)!=str:
+    for ix in output:
+        print("\n--> %s"%ix,end="\n")
+else:
+    print("\n--> %s"%output)
+
+print("")

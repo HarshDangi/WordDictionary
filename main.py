@@ -7,6 +7,10 @@ def translate(word):
     word = word.lower()
     if word in data:
         return data[word]
+    elif word.title() in data:
+        return data[word.title()]
+    elif word.upper() in data:
+        return data[word.upper()]
     else:
         match = get_close_matches(word,data.keys())
         if len(match)>0:
